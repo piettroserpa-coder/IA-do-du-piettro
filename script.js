@@ -11,5 +11,5 @@ form.addEventListener('submit', function(event) {
 
     // Redireciona para o site da Adidas
     // Você pode trocar o '.br' por '.com' dependendo da região
-    window.location.href = "https://www.adidas.com.br";
+    window.location.href = "https://www.adidas.com.br","_blank";
 });
