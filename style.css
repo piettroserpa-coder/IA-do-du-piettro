@@ -31,3 +31,26 @@
     80% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+/* Animação de leitura (olhando para os lados) */
+@keyframes lendo {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-10deg) scale(1.1); filter: drop-shadow(0 0 5px #03a9f4); }
+    75% { transform: rotate(10deg) scale(1.1); filter: drop-shadow(0 0 5px #03a9f4); }
+}
+
+.robo-lendo {
+    animation: lendo 0.8s infinite ease-in-out !important;
+}
+
+/* Efeito de digitação no balão */
+.digitando {
+    border-right: 2px solid #01579b;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: cursor 0.5s step-end infinite;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
