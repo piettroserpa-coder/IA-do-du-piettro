@@ -1,31 +1,33 @@
-/* ... seu CSS anterior aqui ... */
+/* Estilos anteriores do formulário permanecem os mesmos */
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
-#tela-perdeu {
+#tela-surpresa {
     text-align: center;
-    animation: aparecer 0.5s ease-out;
+    padding: 20px;
+    animation: impacto 0.3s ease-in-out;
 }
 
 .img-gato {
     width: 100%;
-    max-width: 350px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    margin-bottom: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 5px solid #000;
 }
 
-.mensagem {
+.mensagem-perdeu {
     color: #ff0000;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 900;
-    text-shadow: 2px 2px #000;
-    letter-spacing: -1px;
+    margin-top: 20px;
+    font-family: 'Arial Black', sans-serif;
 }
 
-@keyframes aparecer {
-    from { transform: scale(0.5); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+/* Animação para dar um susto leve */
+@keyframes impacto {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
