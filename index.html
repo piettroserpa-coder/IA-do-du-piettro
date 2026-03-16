@@ -2,21 +2,18 @@
     <div class="robo-container">
         <div class="robo-icone">🤖</div>
         <div class="balao-fala">
-            <p id="mensagem-robo">Tudo certo! Faça seu cadastro abaixo.</p>
+            <p id="mensagem-robo">Tudo certo! Faça seu cadastro.</p>
         </div>
     </div>
-
     <form id="form-cadastro">
-        <h2>Novo Cliente</h2>
         ```
 
 ---
 
-### 2. Estilização (CSS)
-Adicione estas regras ao seu arquivo `style.css` para criar o balão de fala e animar o robô:
+### 2. No seu arquivo `style.css`
+**Apague tudo** o que você colou que tenha textos como "### 2. Estilização" e deixe apenas as regras de código. Deve ficar assim:
 
 ```css
-/* Estilização do Robô e Balão */
 .robo-container {
     display: flex;
     align-items: center;
@@ -40,7 +37,6 @@ Adicione estas regras ao seu arquivo `style.css` para criar o balão de fala e a
     color: #01579b;
 }
 
-/* Triângulo do balão */
 .balao-fala::after {
     content: '';
     position: absolute;
@@ -52,8 +48,17 @@ Adicione estas regras ao seu arquivo `style.css` para criar o balão de fala e a
     border-color: transparent #03a9f4 transparent transparent;
 }
 
-/* Animação para o Robô não ficar parado */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+@keyframes lendo {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-10deg) scale(1.1); filter: drop-shadow(0 0 5px #03a9f4); }
+    75% { transform: rotate(10deg) scale(1.1); filter: drop-shadow(0 0 5px #03a9f4); }
+}
+
+.robo-lendo {
+    animation: lendo 0.8s infinite ease-in-out !important;
 }
