@@ -1,48 +1,59 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Cliente</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="container">
-        <form id="form-cadastro">
-            <h2>Novo Cliente</h2>
-            <p>Preencha os dados abaixo para realizar o registro.</p>
-
-            <div class="input-group">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" placeholder="Digite seu nome" required>
-            </div>
-
-            <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="exemplo@email.com" required>
-            </div>
-
-            <div class="row">
-                <div class="input-group">
-                    <label for="telefone">Telefone</label>
-                    <input type="tel" id="telefone" placeholder="(00) 00000-0000">
-                </div>
-                <div class="input-group">
-                    <label for="nascimento">Data de Nascimento</label>
-                    <input type="date" id="nascimento">
-                </div>
-            </div>
-
-            <button type="submit" class="btn-salvar">Cadastrar Cliente</button>
-        </form>
-
-        <div id="tela-surpresa" style="display: none;">
-            <img src="https://i.ibb.co/LhyMv0Z/gato-perdeu.jpg" alt="Gato" class="img-gato">
-            <h1 class="mensagem-perdeu">VC PERDEU!</h1>
+<div class="container">
+    <div class="robo-container">
+        <div class="robo-icone">🤖</div>
+        <div class="balao-fala">
+            <p id="mensagem-robo">Tudo certo! Faça seu cadastro abaixo.</p>
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <form id="form-cadastro">
+        <h2>Novo Cliente</h2>
+        ```
+
+---
+
+### 2. Estilização (CSS)
+Adicione estas regras ao seu arquivo `style.css` para criar o balão de fala e animar o robô:
+
+```css
+/* Estilização do Robô e Balão */
+.robo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.robo-icone {
+    font-size: 50px;
+    animation: bounce 2s infinite;
+}
+
+.balao-fala {
+    position: relative;
+    background: #e1f5fe;
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid #03a9f4;
+    font-weight: bold;
+    color: #01579b;
+}
+
+/* Triângulo do balão */
+.balao-fala::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 10px 10px 10px 0;
+    border-style: solid;
+    border-color: transparent #03a9f4 transparent transparent;
+}
+
+/* Animação para o Robô não ficar parado */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
