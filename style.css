@@ -1,56 +1,104 @@
-/* Estilos anteriores do formulário permanecem os mesmos */
-
-.hidden {
-    display: none !important;
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#tela-surpresa {
-    text-align: center;
+body {
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
-    animation: impacto 0.3s ease-in-out;
 }
 
-.img-gato {
+/* Container do Formulário */
+.container {
+    background-color: #ffffff;
     width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    border: 5px solid #000;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.mensagem-perdeu {
-    color: #ff0000;
-    font-size: 3.5rem;
-    font-weight: 900;
-    margin-top: 20px;
-    font-family: 'Arial Black', sans-serif;
+h2 {
+    color: #333;
+    margin-bottom: 8px;
 }
 
-/* Animação para dar um susto leve */
-@keyframes impacto {
-    0% { transform: scale(0); }
-    80% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-/* Animação de leitura (olhando para os lados) */
-@keyframes lendo {
-    0%, 100% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(-10deg) scale(1.1); filter: drop-shadow(0 0 5px #03a9f4); }
-    75% { transform: rotate(10deg) scale(1.1); filter: drop-shadow(0 0 5px #03a9f4); }
+p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
 }
 
-.robo-lendo {
-    animation: lendo 0.8s infinite ease-in-out !important;
+/* Campos de Entrada */
+.input-group {
+    margin-bottom: 15px;
 }
 
-/* Efeito de digitação no balão */
-.digitando {
-    border-right: 2px solid #01579b;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    animation: cursor 0.5s step-end infinite;
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+    font-size: 0.9rem;
 }
 
-@keyframes cursor {
-    50% { border-color: transparent; }
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    background-color: #f9fbff;
+}
+
+/* Organização em Linha (Telefone e Data) */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+.row .input-group {
+    flex: 1;
+}
+
+/* Botão */
+.btn-salvar {
+    width: 100%;
+    padding: 14px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-salvar:hover {
+    background-color: #357abd;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
 }
