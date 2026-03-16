@@ -1,13 +1,12 @@
-/* Configurações Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f7f9;
+    background-color: #eef2f7;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,90 +14,73 @@ body {
     padding: 20px;
 }
 
-/* Container do Formulário */
 .container {
-    background-color: #ffffff;
+    background: #fff;
     width: 100%;
-    max-width: 500px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
+    margin-bottom: 10px;
     color: #333;
-    margin-bottom: 8px;
+    text-align: center;
 }
 
 p {
-    color: #666;
+    text-align: center;
+    color: #777;
+    margin-bottom: 30px;
     font-size: 0.9rem;
-    margin-bottom: 25px;
 }
 
-/* Campos de Entrada */
 .input-group {
     margin-bottom: 15px;
 }
 
-.input-group label {
+label {
     display: block;
-    font-weight: 600;
     margin-bottom: 5px;
-    color: #444;
-    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
 }
 
-.input-group input, 
-.input-group textarea {
+input, textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.input-group input:focus, 
-.input-group textarea:focus {
+    border: 2px solid #eee;
+    border-radius: 8px;
     outline: none;
-    border-color: #4a90e2;
-    background-color: #f9fbff;
+    transition: 0.3s;
 }
 
-/* Organização em Linha (Telefone e Data) */
+input:focus, textarea:focus {
+    border-color: #000; /* Estilo Adidas: foco preto */
+}
+
 .row {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
-.row .input-group {
-    flex: 1;
-}
-
-/* Botão */
 .btn-salvar {
     width: 100%;
-    padding: 14px;
-    background-color: #4a90e2;
-    color: white;
+    padding: 15px;
+    background-color: #000; /* Preto sólido Adidas */
+    color: #fff;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-transform: uppercase;
     margin-top: 10px;
+    transition: 0.3s;
 }
 
 .btn-salvar:hover {
-    background-color: #357abd;
-}
-
-/* Responsividade para telas pequenas */
-@media (max-width: 480px) {
-    .row {
-        flex-direction: column;
-        gap: 0;
-    }
+    background-color: #333;
+    transform: translateY(-2px);
 }
