@@ -1,21 +1,19 @@
-// Aguarda o HTML carregar completamente
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Captura o formulário pelo ID
-    const formulario = document.getElementById('form-cadastro');
+    const form = document.getElementById('form-cadastro');
 
-    // Quando o usuário clicar no botão de enviar...
-    formulario.addEventListener('submit', function(evento) {
+    form.addEventListener('submit', function(event) {
+        // Impede o formulário de limpar a página antes de mostrar o alerta
+        event.preventDefault();
+
+        // Mensagem de sucesso
+        alert('Cadastro feito com sucesso! Redirecionando para a loja virtual...');
+
+        // Link direto para a loja virtual oficial da Adidas Brasil
+        window.location.href = "https://www.adidas.com.br/homem"; 
         
-        // 1. Para o envio padrão (evita que a página pisque e perca o script)
-        evento.preventDefault();
-
-        // 2. Mostra o alerta na tela
-        alert('Cadastro feito com sucesso!');
-
-        // 3. Redireciona para o site da Adidas
-        // Usamos window.location.assign para forçar a navegação
-        window.location.assign("https://www.adidas.com.br");
-        
+        /* Nota: Se quiser a loja geral, use "https://www.adidas.com.br"
+           Se quiser a loja de outlet, use "https://www.adidas.com.br/outlet"
+        */
     });
 });
