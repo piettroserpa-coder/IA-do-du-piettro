@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Nike Oficial</title>
+    <title>Cadastro Nike | Oficial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,9 +18,9 @@
 
     <div class="container">
         <form id="form-nike" onsubmit="redirecionarNike(event)">
-            <div class="logo">NIKE</div>
+            <div class="logo-topo">NIKE</div>
             <h2>Criar Conta</h2>
-            <p>Cadastre-se para acessar a loja oficial da Nike.</p>
+            <p>Cadastre-se para acessar a loja oficial.</p>
 
             <div class="input-group">
                 <label>Nome Completo</label>
@@ -28,4 +28,16 @@
             </div>
 
             <div class="input-group">
-                <label>E-mail
+                <label>E-mail</label>
+                <input type="email" id="email" placeholder="nome@exemplo.com" required>
+            </div>
+
+            <button type="submit" class="btn-nike">Salvar e Acessar Nike</button>
+        </form>
+    </div>
+
+    <script>
+        function redirecionarNike(event) {
+            event.preventDefault();
+            alert('Cadastro feito com
+                  
