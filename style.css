@@ -6,79 +6,61 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #000; /* Fundo preto para destaque */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    overflow: hidden; /* Impede scroll por causa dos itens voando */
+    position: relative;
 }
 
-.container {
+/* --- EFEITO DE FUNDO (LOGOS VOANDO) --- */
+.area-animada {
+    position: absolute;
     width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    text-align: center;
+    height: 100%;
+    z-index: 1;
 }
 
-.logo {
+.logo-voando {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.1); /* Branco bem clarinho/transparente */
+    font-weight: 900;
+    font-style: italic;
+    font-size: 3rem;
+    pointer-events: none;
+    animation: flutuar 15s linear infinite;
+}
+
+/* Diferentes posições e velocidades para os nomes */
+.logo-voando:nth-child(1) { left: 10%; animation-duration: 18s; font-size: 5rem; }
+.logo-voando:nth-child(2) { left: 30%; animation-duration: 12s; animation-delay: 2s; }
+.logo-voando:nth-child(3) { left: 50%; animation-duration: 20s; font-size: 4rem; }
+.logo-voando:nth-child(4) { left: 70%; animation-duration: 15s; animation-delay: 5s; }
+.logo-voando:nth-child(5) { left: 85%; animation-duration: 25s; }
+.logo-voando:nth-child(6) { left: 15%; animation-duration: 14s; animation-delay: 8s; }
+
+@keyframes flutuar {
+    0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+}
+
+/* --- FORMULÁRIO --- */
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 8px;
+    z-index: 10; /* Garante que o form fique acima do fundo */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.nike-main {
     font-size: 2.5rem;
     font-weight: 900;
     font-style: italic;
     letter-spacing: -2px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-}
-
-p {
-    color: #757575;
-    margin-bottom: 30px;
-    font-size: 0.9rem;
-}
-
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #e5e5e5;
-    border-radius: 2px;
-    font-size: 1rem;
-}
-
-input:focus {
-    outline: 1px solid #000;
-}
-
-.btn-nike {
-    width: 100%;
-    padding: 18px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 30px; /* Botão arredondado clássico da Nike */
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background 0.2s;
-}
-
-.btn-nike:hover {
-    background-color: #444;
-}
