@@ -3,52 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Nike | Oficial</title>
+    <title>Cadastro Nike Oficial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="background-icons">
-        <div class="swoosh s1">
-            <svg viewBox="0 0 24 24" fill="#e5e5e5"><path d="M21 7L9 19l-5-5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg>
-        </div>
-        <div class="swoosh s2">
-            <svg viewBox="0 0 24 24" fill="#e5e5e5"><path d="M21 7L9 19l-5-5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg>
-        </div>
-        <div class="swoosh s3">
-            <svg viewBox="0 0 24 24" fill="#f0f0f0"><path d="M21 7L9 19l-5-5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg>
-        </div>
-        <div class="swoosh s4">
-            <svg viewBox="0 0 24 24" fill="#eeeeee"><path d="M21 7L9 19l-5-5 1.41-1.41L9 16.17 19.59 5.59 21 7z"/></svg>
-        </div>
+    <div class="background-animation">
+        <div class="swoosh s1">NIKE</div>
+        <div class="swoosh s2">NIKE</div>
+        <div class="swoosh s3">NIKE</div>
+        <div class="swoosh s4">NIKE</div>
+        <div class="swoosh s5">NIKE</div>
     </div>
 
     <div class="container">
         <form id="form-nike" onsubmit="redirecionarNike(event)">
             <div class="logo">NIKE</div>
             <h2>Criar Conta</h2>
-            <p>Cadastre-se para acessar a loja oficial.</p>
+            <p>Cadastre-se para acessar a loja oficial da Nike.</p>
 
             <div class="input-group">
                 <label>Nome Completo</label>
-                <input type="text" id="nome" placeholder="Seu nome" required>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
             </div>
 
             <div class="input-group">
-                <label>E-mail</label>
-                <input type="email" id="email" placeholder="nome@exemplo.com" required>
-            </div>
-
-            <button type="submit" class="btn-nike">Salvar e Acessar Nike</button>
-        </form>
-    </div>
-
-    <script>
-        function redirecionarNike(event) {
-            event.preventDefault();
-            alert('Cadastro feito com sucesso! Abrindo o site da Nike...');
-            window.location.href = "https://www.nike.com.br";
-        }
-    </script>
-</body>
-</html>
+                <label>E-mail
